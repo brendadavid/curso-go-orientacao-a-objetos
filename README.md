@@ -21,3 +21,15 @@ Quando são inicializados com a palavra chave *new*, a menos que seja colocado u
 
 	//true porque está comparando o conteúdo dos objetos que são iguais
 	fmt.Println(*contaCris == *contaCris2)
+
+Deve ser adicionado um predicado + *nomeStruct entre parênteses antes do nome da função para que o Go saiba qual objeto está chamando a função e para onde o ponteiro deve apontar. Ex: `func (c *ContaCorrente) Sacar(valorDoSaque float64)`, para a contaSilvia os atributos dentro da função serão acessados como c.saldo, c.titular..
+
+É possível que uma função receba um número indeterminado de parâmetros. Funções deste tipo são conhecidas em Go como variadic functions, ou função variádica. Para criar uma variadic function, devemos preceder o tipo do argumento com reticências, ex: 
+	
+	func Somando(numeros ...int) int
+
+	func main() {
+		fmt.Println(Somando(1))
+		fmt.Println(Somando(1,1))
+	}
+
