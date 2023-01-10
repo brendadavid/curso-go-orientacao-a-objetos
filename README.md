@@ -33,3 +33,4 @@ Deve ser adicionado um predicado + *nomeStruct entre parênteses antes do nome d
 		fmt.Println(Somando(1,1))
 	}
 
+Na função Transferir, tanto a conta que chama a função quanto a conta destino devem receber o "*" para que o Go saiba para onde deve apontar, e no parâmetro da função, a conta destino deve recer um "&" antes do nome do objeto.
